@@ -1,0 +1,12 @@
+.content-body {
+  text-align: justify;
+
+  h1 {
+    text-transform: uppercase;
+    margin: $gap 0;
+  }
+
+  p {
+    margin: $gap * 10 0;
+  }
+}
