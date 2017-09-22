@@ -1,9 +1,15 @@
 import stickyElement from './modules/sticky';
 import throttle from './service/throttle';
 
-const sticky_container = document.querySelector('.js-sticky');
+const container = document.querySelector('.js-container');
 const element = document.querySelector('.js-header');
 
+const stickyHeader = () => {
+  if (container && element) {
+    stickyElement(container, element, 'header--fixed')
+  }
+}
+
 window.addEventListener('scroll', () => {
-  throttle(stickyElement(sticky_container, element, 'header--fixed'), 250);
+  throttle(stickyHeader());
 });
